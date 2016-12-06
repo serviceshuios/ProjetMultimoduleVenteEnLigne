@@ -7,9 +7,7 @@
     <artifactId>VenteEnLigne</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <groupId>com.huios</groupId>
   <artifactId>monappli-domain</artifactId>
-  <version>1.0-SNAPSHOT</version>
   <name>monappli-domain</name>
   <url>http://maven.apache.org</url>
   <properties>
