@@ -1,5 +1,7 @@
 package com.huios;
 
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
 import com.huios.VenteEnLigne.dao.ProduitDao;
 import com.huios.VenteEnlLigne.metier.Produit;
 
@@ -13,7 +15,21 @@ import junit.framework.TestSuite;
 public class AppTest 
     extends TestCase
 {
-	ProduitDao produitDao;
+
+//	private Produit produit;
+//	private ProduitDao produitDao;
+//	private ClassPathXmlApplicationContext appContext;
+//	
+//
+//	@Override
+//	protected void setUp() throws Exception {
+//		super.setUp();
+//		produit = new Produit();
+//		appContext = new ClassPathXmlApplicationContext("spring/application-config.xml");
+//
+//		produitDao = (ProduitDao) appContext.getBean("produitDao");
+//	}
+	
     /**
      * Create the test case
      *
@@ -40,15 +56,15 @@ public class AppTest
         assertTrue( true );
     }
     
-    /**
-     * Test la creation de la base
-     */
-    public void testCreationBase() {
-    	Produit prod = new Produit();
-    	prod.setDesignation("Produit test");
-    	prod.setPrix(12.00);
-    	prod.setDescription("Produit utilisé dans les tests");
-    	
-    	this.produitDao.save(prod);
-    }
+//    /**
+//     * Test la creation de la base
+//    	this.produitDao.save(prod);
+//       */
+//    public void testCreationBase() {
+//    	Produit prod = new Produit();
+//    	prod.setDesignation("Produit test");
+//    	prod.setPrix(12.00);
+//    	prod.setDescription("Produit utilisé dans les tests");
+//    	
+//  }
 }

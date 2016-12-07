@@ -1,0 +1,25 @@
+<persistence xmlns="http://java.sun.com/xm/ns/persistence"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:location="http://java.sun.com/xm/ns/persistence"
+	version="1.0">
+
+	<class>com.huios.VenteEnlLigne.metier.Categorie</class>
+	<class>com.huios.VenteEnlLigne.metier.Commande</class>
+	<class>com.huios.VenteEnlLigne.metier.LigneCommande</class>
+	<class>com.huios.VenteEnlLigne.metier.Panier</class>
+	<class>com.huios.VenteEnlLigne.metier.Produit</class>
+	<class>com.huios.VenteEnlLigne.metier.Role</class>
+	<class>com.huios.VenteEnlLigne.metier.Personne</class>
+	<class>com.huios.VenteEnlLigne.metier.User</class>
+
+	<provider>org.hibernate.ejb.HibernatePersistence</provider>
+	
+	<persistence-unit name="multiModules-pu" transaction-type="RESOURCE_LOCAL">
+		<properties>
+			<property name="hibernate.show_sql" value="true" />
+			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" />
+			<property name="hibernate.hbm2ddl.auto" value="update" />
+			<property name="packageToScan" value="com" />
+		</properties>
+	</persistence-unit>
+</persistence>
