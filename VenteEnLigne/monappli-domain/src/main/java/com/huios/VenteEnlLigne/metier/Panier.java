@@ -10,4 +10,12 @@ public class Panier implements Serializable{
 	private static final long serialVersionUID = 2264262400805241155L;
 
 	private Map<Long, LigneCommande> items = new HashMap<Long, LigneCommande>();
+
+	public Map<Long, LigneCommande> getItems() {
+		return items;
+	}
+
+	public void setItems(Map<Long, LigneCommande> items) {
+		this.items = items;
+	}
 }

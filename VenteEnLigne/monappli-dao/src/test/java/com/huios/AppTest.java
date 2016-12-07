@@ -1,5 +1,8 @@
 package com.huios;
 
+import com.huios.VenteEnLigne.dao.ProduitDao;
+import com.huios.VenteEnlLigne.metier.Produit;
+
 import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
@@ -10,6 +13,7 @@ import junit.framework.TestSuite;
 public class AppTest 
     extends TestCase
 {
+	ProduitDao produitDao;
     /**
      * Create the test case
      *
@@ -34,5 +38,17 @@ public class AppTest
     public void testApp()
     {
         assertTrue( true );
+    }
+    
+    /**
+     * Test la creation de la base
+     */
+    public void testCreationBase() {
+    	Produit prod = new Produit();
+    	prod.setDesignation("Produit test");
+    	prod.setPrix(12.00);
+    	prod.setDescription("Produit utilisé dans les tests");
+    	
+    	this.produitDao.save(prod);
     }
 }
