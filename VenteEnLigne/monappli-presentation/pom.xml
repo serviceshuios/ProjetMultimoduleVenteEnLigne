@@ -12,6 +12,9 @@
 	<packaging>war</packaging>
 	<name>monappli-presentation Maven Webapp</name>
 	<url>http://maven.apache.org</url>
+	<properties>
+		<java-version>${java.version}</java-version>
+	</properties>
 	<dependencies>
 		<dependency>
 			<groupId>junit</groupId>
