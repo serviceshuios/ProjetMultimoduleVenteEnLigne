@@ -1,4 +1,4 @@
-package com.huios.VenteEnLigne.metier;
+package com.huios.VenteEnlLigne.metier;
 
 import java.util.Collection;
 
@@ -6,6 +6,7 @@ public class Role {
 	private Long idRole;
 	private String nomRole;
 	private Collection<User> users;
+	
 	public Long getIdRole() {
 		return idRole;
 	}
