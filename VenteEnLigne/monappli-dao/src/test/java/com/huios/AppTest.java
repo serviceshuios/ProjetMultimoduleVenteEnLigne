@@ -12,23 +12,21 @@ import junit.framework.TestSuite;
 /**
  * Unit test for simple App.
  */
-public class AppTest 
-    extends TestCase
-{
+public class AppTest extends TestCase {
 
-//	private Produit produit;
-//	private ProduitDao produitDao;
-//	private ClassPathXmlApplicationContext appContext;
-//	
-//
-//	@Override
-//	protected void setUp() throws Exception {
-//		super.setUp();
-//		produit = new Produit();
-//		appContext = new ClassPathXmlApplicationContext("spring/application-config.xml");
-//
-//		produitDao = (ProduitDao) appContext.getBean("produitDao");
-//	}
+	private Produit produit;
+	private ProduitDao produitDao;
+	private ClassPathXmlApplicationContext appContext;
+	
+
+	@Override
+	protected void setUp() throws Exception {
+		super.setUp();
+		produit = new Produit();
+		appContext = new ClassPathXmlApplicationContext("spring/application-config.xml");
+
+		produitDao = (ProduitDao) appContext.getBean("produitDao");
+	}
 	
     /**
      * Create the test case
