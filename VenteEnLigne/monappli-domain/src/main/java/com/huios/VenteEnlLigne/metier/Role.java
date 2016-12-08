@@ -1,8 +1,12 @@
 package com.huios.VenteEnlLigne.metier;
 
+import java.io.Serializable;
 import java.util.Collection;
 
-public class Role {
+public class Role implements Serializable {
+	
+	/** Serial UID. */
+	private static final long serialVersionUID = -1331106387025327730L;
 	private Long idRole;
 	private String nomRole;
 	private Collection<User> users;
