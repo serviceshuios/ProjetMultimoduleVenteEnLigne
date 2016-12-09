@@ -24,7 +24,7 @@ public class ServiceClientTest
     
     @Before
     public void setUp() {
-    	MockitoAnnotations.initMocks(userDao);
+    	MockitoAnnotations.initMocks(this);
     	serviceClient = new ServiceClient();
     	serviceClient.setUserDao(userDao);
     }
