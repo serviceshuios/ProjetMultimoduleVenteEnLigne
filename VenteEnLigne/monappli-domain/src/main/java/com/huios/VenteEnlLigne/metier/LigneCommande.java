@@ -40,7 +40,7 @@ public class LigneCommande implements Serializable{
 	public Integer getQuantite() {
 		return quantite;
 	}
-	public void setQuantitee(Integer quantite) {
+	public void setQuantite(Integer quantite) {
 		this.quantite = quantite;
 	}
 	public Double getPrix() {

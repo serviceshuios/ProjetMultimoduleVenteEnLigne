@@ -3,8 +3,14 @@ package com.huios.VenteEnlLigne.metier;
 import java.io.Serializable;
 import java.util.Collection;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
+@Entity
 public class User implements Serializable{
 	
 	/** Generated Serial UID. **/
@@ -18,6 +24,8 @@ public class User implements Serializable{
 	private String tel;
 	private Collection<Commande> commandes;
 	
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	public Long getIdUser() {
 		return idUser;
 	}

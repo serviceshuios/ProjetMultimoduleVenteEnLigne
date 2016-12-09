@@ -6,6 +6,10 @@ package com.huios.VenteEnLigne;
  */
 public class App 
 {
+	/**
+	 * Constructor.
+	 */
+	private App() {}
     public static void main( String[] args )
     {
         System.out.println( "Hello World!" );

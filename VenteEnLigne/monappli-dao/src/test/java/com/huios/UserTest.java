@@ -1,43 +1,42 @@
 package com.huios;
 
+import org.junit.BeforeClass;
+import org.junit.Test;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.huios.VenteEnLigne.dao.ProduitDao;
+import com.huios.VenteEnLigne.dao.UserDao;
 import com.huios.VenteEnlLigne.metier.Produit;
-import org.junit.*;
-
+import com.huios.VenteEnlLigne.metier.User;
 
 /**
- * Unit test for simple App.
+ * Unit test for user.
  */
 @Transactional
-public class AppTest  {
+public class UserTest {
 
-	private static Produit produit;
-	private static ProduitDao produitDao;
+	private static User user;
+	private static UserDao userDao;
 	private static ClassPathXmlApplicationContext appContext;
 	
-
 	@BeforeClass
 	public static void setUp() throws Exception {
-		produit = new Produit();
+		user = new User();
 		appContext = new ClassPathXmlApplicationContext("spring/application-config.xml");
 
-		produitDao = (ProduitDao) appContext.getBean("produitDao");
+		userDao = (UserDao) appContext.getBean("userDao");
 	}
-    
     
     /**
      * Test la creation de la base
      */
 	 @Test
     public void testCreationBase() {
-    	Produit prod = new Produit();
-    	prod.setDesignation("Produit test");
-    	prod.setPrix(12.00);
-    	prod.setDescription("Produit utilisé dans les tests");
-    	produitDao.save(prod);
-    	
+    	User usr = new User();
+    	usr.setEmail("user@test.fr");
+    	usr.setPassword("testPWD");
+    	usr.setAdresse("rue du test");
+    	userDao.save(usr);
   }
 }

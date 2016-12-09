@@ -3,6 +3,10 @@ package com.huios.VenteEnlLigne.metier;
 import java.io.Serializable;
 import java.util.Collection;
 
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
 public class Role implements Serializable {
 	
 	/** Serial UID. */
@@ -11,6 +15,8 @@ public class Role implements Serializable {
 	private String nomRole;
 	private Collection<User> users;
 	
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	public Long getIdRole() {
 		return idRole;
 	}
