@@ -1,4 +1,4 @@
-package com.huios;
+package com.huios.service;
 
 /**
  * Hello world!
