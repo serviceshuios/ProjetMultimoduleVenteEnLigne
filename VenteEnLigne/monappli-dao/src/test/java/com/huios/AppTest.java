@@ -5,6 +5,9 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.huios.VenteEnLigne.dao.ProduitDao;
 import com.huios.VenteEnlLigne.metier.Produit;
+
+import static org.junit.Assert.*;
+
 import org.junit.*;
 
 
@@ -22,6 +25,9 @@ public class AppTest  {
 	@BeforeClass
 	public static void setUp() throws Exception {
 		produit = new Produit();
+    	produit.setDesignation("Produit test");
+    	produit.setPrix(12.00);
+    	produit.setDescription("Produit utilisé dans les tests");
 		appContext = new ClassPathXmlApplicationContext("spring/application-config.xml");
 
 		produitDao = (ProduitDao) appContext.getBean("produitDao");
@@ -33,11 +39,9 @@ public class AppTest  {
      */
 	 @Test
     public void testCreationBase() {
-    	Produit prod = new Produit();
-    	prod.setDesignation("Produit test");
-    	prod.setPrix(12.00);
-    	prod.setDescription("Produit utilisé dans les tests");
-    	produitDao.save(prod);
+    	produitDao.save(produit);
+    	assertFalse(produitDao.findProduitByDesignation(produit.getDesignation()).isEmpty());
+    	assertFalse(produitDao.findByDescription(produit.getDescription()).isEmpty());
     	
   }
 }
