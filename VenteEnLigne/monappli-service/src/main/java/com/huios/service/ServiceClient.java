@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import com.huios.VenteEnLigne.dao.UserDao;
 import com.huios.VenteEnlLigne.metier.User;
 
+@Service
 public class ServiceClient implements IServiceClient {
 
 	@Autowired
