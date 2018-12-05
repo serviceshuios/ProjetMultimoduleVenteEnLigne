@@ -3,6 +3,7 @@ package com.huios.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.huios.VenteEnLigne.dao.UserDao;
 import com.huios.VenteEnlLigne.metier.User;
